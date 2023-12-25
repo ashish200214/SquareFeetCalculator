@@ -1,0 +1,73 @@
+.head
+{
+    background-color: black;
+    color: white;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+}
+/* it is for the unit container */
+.unit1  
+{
+    width: 400px;
+    margin: auto;
+    border: 1px solid black;   
+    padding: 10px; 
+    margin-top: 20px;
+}
+
+.unit1>div{
+    margin:auto;
+    display: block;
+    width: 100px;
+
+    
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: grey;
+    color: white;
+}
+
+.inputFromUser{
+    
+    width: 400px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top:20px ;
+}
+
+#len,#wid{
+    margin: auto;
+    padding: 5px;
+    padding:auto;
+    width: 300px;
+}
+
+.price{
+    width: 400px;
+    margin: auto;
+    border: 1px solid black;
+    margin-top:20px ;
+    padding: 10px;
+}
+.rateContainer
+{
+    width: 400px;
+    margin: auto;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top:10px ;
+}
+div.button{
+    width: 50px;
+    margin: auto;
+}
+.price h3{
+    text-align: left;
+    
+}

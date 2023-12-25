@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="head">Square Foot Calculator</h1>
+
+  <div class="unit1">
+    <div class="inchToFeet">
+      inch to feet<input type="radio" name="unit" class="unitSelection />
+    </div>
+
+    <div class="mmToFeet">mm to feet<input type="radio" name="unit" class="unitSelection" /></div>
+  </div>
+
+  <div class="inputFromUser">
+    <div id="len">Enter Length : <input type="number" id="lengthInput" /></div>
+    <div id="wid">Enter Width : <input type="number" id="widthInput" /></div>
+  </div>
+
+  <div class="rateContainer">
+    Enter Rate Per Square Feet : <input type="number" name="" id="rate" />
+  </div>
+
+  <div class="price">
+    <div class="button">
+      <button id="calculateButton">calculate</button>
+    </div>
+  </div>
+  <div class="price" style="border: none">
+    <h2 id="sqFeet"></h2>
+    <h2 id="priceFinal"></h2>
+  </div>
+
+  <script>
+    
+      const calculateButton = document.getElementById("calculateButton");
+
+      calculateButton.addEventListener("click", function () {
+        const selection = document.querySelector('input[name="unit"]:checked');
+        const length = parseFloat(document.getElementById("lengthInput").value);
+        const width = parseFloat(document.getElementById("widthInput").value);
+        const rate = parseFloat(document.getElementById("rate").value);
+
+        if (selection && !isNaN(length) && !isNaN(width) && !isNaN(rate)) {
+          if (selection.classList.contains("unitSelection") && selection.parentElement.classList.contains("inchToFeet")) {
+            inchToFeet(length, width, rate);
+          } else if (selection.classList.contains("unitSelection") && selection.parentElement.classList.contains("mmToFeet")) {
+            mmToFeet(length, width, rate);
+          }
+        } else {
+          alert("Please enter valid numeric values for length, width, and rate.");
+        }
+      });
+  
+
+    function inchToFeet(length, width, rate) {
+      let totalSqFeet = (length * width) / 144;
+      document.getElementById("sqFeet").textContent =
+        "Total Square Feet is " + totalSqFeet.toFixed(2);
+
+      let price = parseFloat(document.getElementById("rate").value);
+      document.getElementById("priceFinal").textContent =
+        "Total Price is " + (price * totalSqFeet).toFixed(2);
+    }
+
+    function mmToFeet(length, width, rate) {
+      let totalSqFeet = (length * width) / 92900;
+      document.getElementById("sqFeet").textContent =
+        "Total Square Feet is " + totalSqFeet.toFixed(2);
+
+      let price = parseFloat(document.getElementById("rate").value);
+      document.getElementById("priceFinal").textContent =
+        "Total Price is " + (price * totalSqFeet).toFixed(2);
+    }
+  </script>
+</body>
+</html>
