@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Feet Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1 id="main">Square Feet Converter</h1>
+        <!-- <button id="btn-mode">Mode</button>
+        <div id="hovering" >
+            <button id="light">Light Mode</button>
+            <button id="dark">Dark Mode</button>
+        </div> -->
+    </div>
+
+    <div class="section">
+        <h2>Select the unit from the following : </h2>
+
+       <div class="unit-container">
+        
+        <div class="parentDiv-radio">
+            <div class="unit-select">
+                <label id = "label" for="inch">inch</label>
+    
+                <input type="radio" name="unit" id="inch">
+             </div>
+             
+             
+             <div class=
+             "unit-select">
+                <label id = "label" for="mm">mm</label>
+                <input type="radio" name="unit" id="mm">
+             </div>
+        </div>
+         <div class="input" >
+            <label for="length">Enter The Length : <input type="number" id="length"></label>
+         </div>
+
+         <div class="input">
+            <label for="width">Enter The Width : <input type="number" id="width"></label>
+            </div>
+    
+         <div class="input">
+            <label for="rate">Enter Rate Per sq. Feet :  <input type="number" id="rate">
+            </label>
+         </div>
+
+         
+       </div>
+       <div>
+        <button id="calculate-btn">Calculate</button>
+     </div>
+     
+       <div>
+        <h3 id="ans"></h3>
+       </div>
+
+    </div>
+
+    <div id="error">
+        
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
