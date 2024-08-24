@@ -15,6 +15,11 @@ header {
     padding: 1em 0;
 }
 
+#calculate-btn{
+    
+    margin: 1px auto;
+}
+
 .header h1 {
     text-align: center;
     color: white;
